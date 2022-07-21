@@ -6,6 +6,7 @@ class Keyboard {
   #delete
   #numbers
   #replace
+  #controls
 
   get buttons () {
     return this
@@ -15,6 +16,10 @@ class Keyboard {
 
   get confirm () {
     return this.#confirm ??= schema.controle
+  }
+
+  get controls () {
+    return this.#controls ??= []
   }
 
   get delete () {
@@ -27,30 +32,6 @@ class Keyboard {
 
   get replace () {
     return this.#replace ??= schema.controle
-  }
-
-  constructor () {
-    this.mount()
-  }
-
-  changeText () {
-    this.confirm.textContent = 'Confirmar'
-    this.delete.textContent = 'Deletar'
-    this.replace.textContent = 'Corrigir'
-    return this
-  }
-
-  mount () {
-    this.changeText()
-    this.setAt()
-    return this
-  }
-
-  setAt () {
-    this.confirm.setAttribute('class', 'urna__button-confirm')
-    this.delete.setAttribute('class', 'urna__button-delete')
-    this.replace.setAttribute('class', 'urna__button-replace')
-    return this
   }
 
   static create () {
