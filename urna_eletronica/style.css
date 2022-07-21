@@ -47,12 +47,7 @@ html, body {
   width: 70px;
 }
 
-.urna__keyboard-controls {
-  display: flex;
-  gap: 20px;
-}
-
-.urna__keyboard-row button {
+.urna__keyboard-control {
   color: #fff;
   cursor: pointer;
   font-size: 10px;
