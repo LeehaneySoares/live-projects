@@ -12,6 +12,7 @@ html, body {
   background-color: #dbd5c9;
   display: flex;
   gap: 40px;
+  height: 470px;
   margin: 0 auto;
   max-width: 920px;
   padding: 40px;
@@ -19,24 +20,46 @@ html, body {
 
 .urna__display {
   background: linear-gradient(to right, #e8e8e8, #c1c1c1);
-  height: 300px;
   width: 100%;
 }
 
-.urna__buttons {
+.urna__keyboard {
+  align-items: center;
   background-color: #1e1e1e;
   display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  height: 100%;
+  flex-direction: column;
+  gap: 20px;
   justify-content: center;
-  padding: 20px;
-  width: 100%;
+  padding: 30px;
+  width: 60%;
 }
 
-.urna__button {
-  box-shadow: 2px 2px 3px #555;
+.urna__keyboard-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.urna__keyboard-button {
+  box-shadow: 2px 2px 3px #666;
   cursor: pointer;
-  font-size: 20px;
-  width: calc(100% / 4);
+  height: 60px;
+  width: 70px;
+}
+
+.urna__keyboard-controls {
+  display: flex;
+  gap: 20px;
+}
+
+.urna__keyboard-row button {
+  color: #fff;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: bold;
+  height: 60px;
+  padding: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 80px;
 }
