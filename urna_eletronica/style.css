@@ -3,7 +3,8 @@
   font-size: arial;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -14,12 +15,13 @@ html, body {
   gap: 40px;
   height: 470px;
   margin: 0 auto;
-  max-width: 920px;
+  max-width: 1020px;
   padding: 40px;
 }
 
 .urna__display {
   background: linear-gradient(to right, #e8e8e8, #c1c1c1);
+  border: 2px solid #555;
   width: 100%;
 }
 
@@ -47,7 +49,12 @@ html, body {
   cursor: pointer;
   font-size: 20px;
   height: 60px;
-  width: 80px;
+  width: 90px;
+}
+
+.btn-controls {
+  align-items: flex-end;
+  display: flex;
 }
 
 .btn-confirm,
@@ -63,8 +70,10 @@ html, body {
 
 .btn-replace {
   background-color: #f09046;
+  height: 45px;
 }
 
 .btn-white {
   background-color: #f1f1f1;
+  height: 45px;
 }
