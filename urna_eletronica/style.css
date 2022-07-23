@@ -6,7 +6,7 @@
 
 * {
   box-sizing: border-box;
-  font-size: arial;
+  font-family: arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -21,7 +21,6 @@ body {
   background-color: #dbd5c9;
   display: flex;
   gap: 40px;
-  height: 480px;
   margin: 0 auto;
   max-width: 1020px;
   padding: 40px;
