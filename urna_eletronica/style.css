@@ -143,6 +143,12 @@ body {
   animation-iteration-count: infinite;
 }
 
+.urna__display-descricao {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .urna__display-infoRight {
   align-items: flex-end;
   display: flex;
