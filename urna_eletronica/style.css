@@ -145,3 +145,16 @@ body {
 .urna__display-figure {
   margin: 0;
 }
+
+.urna__display-figure.small {
+  width: calc(80 / 100 * 100%);
+}
+
+.urna__display-figure.small img {
+  width: calc(100 / 100 * 100%);
+}
+
+.urna__display-caption {
+  background-color: #fff;
+  margin-top: -4px;
+}
