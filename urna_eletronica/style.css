@@ -141,3 +141,7 @@ body {
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
+
+.urna__display-figure {
+  margin: 0;
+}
