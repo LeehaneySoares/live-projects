@@ -2,6 +2,7 @@ class Display {
   #aviso
   #cargo
   #descricao
+  #etapa = 0
   #lateral
   #numeros
   #title
@@ -37,6 +38,16 @@ class Display {
     this.#aviso = aviso
     this.#lateral = lateral
     this.#numeros = numeros
+    this.comecarEtapa()
+  }
+
+  comecarEtapa () {
+    this.escondeDescricao()
+  }
+
+  escondeDescricao () {
+    this.descricao.style.display = 'none'
+    return this
   }
 
   static create (descriptor) {
