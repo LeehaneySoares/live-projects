@@ -15,15 +15,17 @@
           <div class="urna__display-infoLeft">
             <article class="urna__display-infoCandidato">
               <h2>SEU VOTO PARA</h2>
-              <strong>VEREADOR</strong>
+              <strong class="urna__display-cargo">VEREADOR</strong>
               <div class="urna__display-numeros">
                 <span class="numero booth"></span>
                 <span class="numero"></span>
               </div>
-              <label>Número:</label>
-              <label>Nome:</label>
-              <label>Partido:</label>
-              <label>Vice-Prefeito:</label>
+              <div class="urna__display-descricao">
+                <label>Número:</label>
+                <label>Nome:</label>
+                <label>Partido:</label>
+                <label>Vice-Prefeito:</label>
+              </div>
             </article>
           </div>
           <div class="urna__display-infoRight">
@@ -67,12 +69,13 @@
           <button class="urna__keyboard-button">0</button>
         </div>
         <div class="urna__keyboard-row btn-controls">
-          <button class="urna__keyboard-button btn-white">branco</button>
+          <button class="urna__keyboard-button btn-white">Branco</button>
           <button class="urna__keyboard-button btn-replace">Corrige</button>
           <button class="urna__keyboard-button btn-confirm">Confirmar</button>
         </div>
       </aside>
     </main>
+    <script type="module" src="./interface/digito.js" defer></script>
     <script type="module" src="./index.js" defer></script>
   </body>
 </html>
