@@ -1,3 +1,3 @@
-const $ = element => document.querySelector(element)
+const $ = document.querySelector.bind(document)
 
 export default $
