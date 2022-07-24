@@ -117,11 +117,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100%;
 }
 
-.urna__display-infoCandidato strong:nth-of-type(2) {
+.urna__display-cargo {
   text-align: center;
 }
 
