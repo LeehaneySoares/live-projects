@@ -1,11 +1,13 @@
+import $ from './shortcuts/$.js'
 import Display from './display/Display.js'
 import Keyboard from './keyboard/Keyboard.js'
-import descriptor from './interface/descriptor.js'
 import schema from './schema.js'
 
 class Urna {
+  #descriptor
+
   get descriptor () {
-    return descriptor
+    return this.#descriptor
   }
 
   get display () {
@@ -20,7 +22,8 @@ class Urna {
     return schema
   }
 
-  constructor () {
+  constructor (descriptor) {
+    this.#descriptor = descriptor
     this.init()
   }
 
@@ -31,7 +34,14 @@ class Urna {
   }
 
   static create () {
-    return new Urna()
+    return new Urna({
+      title: $('.urna__display-infoCandidato h2'),
+      cargo: $('.urna__display-cargo'),
+      descricao: $('.urna__display-descricao'),
+      aviso: $('.urna__display-infoInferior'),
+      lateral: $('.urna__display-infoRight'),
+      numeros: $('.urna__display-numeros')
+    })
   }
 }
 
