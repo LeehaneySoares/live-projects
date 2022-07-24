@@ -5,6 +5,6 @@ export default {
   cargo: $('.urna__display-cargo'),
   descricao: $('.urna__display-descricao'),
   aviso: $('.urna__display-infoInferior'),
-  laretal: $('.urna__display-infoRight'),
+  lateral: $('.urna__display-infoRight'),
   numeros: $('.urna__display-numeros')
 }
