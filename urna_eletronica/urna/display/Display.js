@@ -1,10 +1,13 @@
 import { $ } from '../shortcuts.js'
+import montarDados from './montarDados.js'
 
 class Display {
   #aviso
   #bloco
   #cargo
+  #candidato
   #descricao
+  #dadosCandidato
   #etapaActual = 0
   #etapa
   #lateral
@@ -24,8 +27,16 @@ class Display {
     return this.#bloco ??= ''
   }
 
+  get candidato () {
+    return this.#candidato ??= ''
+  }
+
   get cargo () {
     return this.#cargo ??= ''
+  }
+
+  get dadosCandidato () {
+    return this.#dadosCandidato ??= []
   }
 
   get descricao () {
@@ -60,6 +71,7 @@ class Display {
     this.#title = descriptor?.title,
     this.#cargo = descriptor?.cargo
     this.#descricao = descriptor?.descricao
+    this.#dadosCandidato = descriptor?.dadosCandidato
     this.#aviso = descriptor?.aviso
     this.#lateral = descriptor?.lateral
     this.#numeros = descriptor?.numeros
@@ -114,11 +126,20 @@ class Display {
   }
 
   #mostrarDesc () {
+    this.title.style.display = 'block'
+    this.lateral.style.display = 'flex'
+    this.descricao.style.display = 'flex'
+    this.aviso.style.display = 'block'
+    montarDados(this)
     return this
   }
 
   refreshInterface () {
-    alert('finalizado')
+    let etapa = this.schema[this.#etapaActual]
+    this.#candidato = etapa.candidatos
+      .filter(item => item.numero === this.numero)
+    this.candidato.length > 0 &&
+    this.#mostrarDesc()
     return this
   }
 
