@@ -1,4 +1,4 @@
-import { $ } from './shortcuts.js'
+import { $, all } from './shortcuts.js'
 import Display from './display/Display.js'
 import Keyboard from './keyboard/Keyboard.js'
 import schema from '../schema.js'
@@ -44,7 +44,8 @@ class Urna {
       descricao: $('.urna__display-descricao'),
       aviso: $('.urna__display-infoInferior'),
       lateral: $('.urna__display-infoRight'),
-      numeros: $('.urna__display-numeros')
+      numeros: $('.urna__display-numeros'),
+      dadosCandidato: all('.urna__display-descricao label')
     })
   }
 }
