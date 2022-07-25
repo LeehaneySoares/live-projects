@@ -4,7 +4,7 @@ export default [
     numeros: 5,
     candidatos: [
       {
-        numero: 38111,
+        numero: '38111',
         name: 'Fulano de Tal',
         partido: 'ABC',
         fotos: [
@@ -15,7 +15,7 @@ export default [
         ]
       },
       {
-        numero: 77222,
+        numero: '77222',
         name: 'Beltrano da silva',
         partido: 'ABC',
         fotos: [
@@ -32,7 +32,7 @@ export default [
     numeros: 2,
     candidatos: [
       {
-        numero: 99,
+        numero: '99',
         name: 'Ciclano',
         partido: 'ABC',
         vice: 'Cic',
@@ -49,7 +49,7 @@ export default [
         ]
       },
       {
-        numero: 84,
+        numero: '84',
         name: 'Zulano',
         partido: 'QWERTY',
         vice: 'Zul',
