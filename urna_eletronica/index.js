@@ -1,3 +1,3 @@
-import Urna from './Urna.js'
+import Urna from './urna/Urna.js'
 
 Urna.create()
