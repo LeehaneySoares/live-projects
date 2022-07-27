@@ -1,5 +1,6 @@
 import { $ } from '../shortcuts.js'
 import montarDados from './montarDados.js'
+import montarFotos from './montarFotos.js'
 
 class Display {
   #aviso
@@ -131,6 +132,7 @@ class Display {
     this.descricao.style.display = 'flex'
     this.aviso.style.display = 'block'
     montarDados(this)
+    montarFotos(this)
     return this
   }
 
