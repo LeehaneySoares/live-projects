@@ -4,7 +4,7 @@ import events from './events.js'
 class Keyboard {
   #botoes
   #numero
-  #parent
+  #display
   #value
 
   get botoes () {
@@ -12,7 +12,7 @@ class Keyboard {
   }
 
   get display () {
-    return this.parent?.display
+    return this.#display ??= ''
   }
 
   get value () {
@@ -20,7 +20,7 @@ class Keyboard {
   }
 
   constructor (parent) {
-    this.#parent = parent
+    this.#display = parent?.display
     events(this)
   }
 
