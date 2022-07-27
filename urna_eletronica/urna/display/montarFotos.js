@@ -3,8 +3,6 @@ export default function (target) {
   const lateral = target?.lateral
   const fotosCandidato = candidato?.fotos
 
-  console.log(fotosCandidato, candidato)
-
   fotosCandidato.forEach(foto =>
     lateral.innerHTML = `
     <figure class="urna__display-figure">
