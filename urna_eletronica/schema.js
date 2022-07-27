@@ -9,7 +9,7 @@ export default [
         partido: 'ABC',
         fotos: [
           {
-            url: '38111.jpg',
+            url: './assets/38111.jpg',
             legenda: 'Vereador'
           }
         ]
@@ -17,10 +17,10 @@ export default [
       {
         numero: '77222',
         name: 'Beltrano da silva',
-        partido: 'ABC',
+        partido: 'DEFG',
         fotos: [
           {
-            url: '38111.jpg',
+            url: './assets/77222.jpg',
             legenda: 'Vereador'
           }
         ]
@@ -38,11 +38,11 @@ export default [
         vice: 'Cic',
         fotos: [
           {
-            url: '99.jpg',
+            url: './assets/99.jpg',
             legenda: 'Prefeito'
           },
           {
-            url: '99_2.jpg',
+            url: './assets/99_2.jpg',
             legenda: 'Vide-Prefeito',
             small: true
           }
@@ -55,11 +55,11 @@ export default [
         vice: 'Zul',
         fotos: [
           {
-            url: '84.jpg',
+            url: './assets/84.jpg',
             legenda: 'Prefeito'
           },
           {
-            url: '84_2.jpg',
+            url: './assets/84_2.jpg',
             legenda: 'Vice-prefeito',
             small: true
           }
