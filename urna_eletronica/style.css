@@ -172,3 +172,9 @@ body {
 .urna__display-figure.small img {
   width: 100%;
 }
+
+.urna__display-caption {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
