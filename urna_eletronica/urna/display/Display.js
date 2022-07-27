@@ -140,8 +140,19 @@ class Display {
     let etapa = this.schema[this.#etapaActual]
     this.#candidato = etapa.candidatos
       .filter(item => item.numero === this.numero)
-    this.candidato.length > 0 &&
-    this.#mostrarDesc()
+    this.candidato.length > 0
+      ? this.#mostrarDesc()
+      : this.#votoNulo()
+    return this
+  }
+
+  #votoNulo () {
+    this.descricao.style = 'flex'
+    this.descricao.innerHTML = `
+      <span style="font-size: 40px;" class="booth">
+        VOTO NULO
+      </span>
+    `
     return this
   }
 
