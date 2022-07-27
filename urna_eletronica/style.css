@@ -140,7 +140,7 @@ body {
   width: 35px;
 }
 
-.urna__display-numeros span.booth {
+span.booth {
   animation-name: booth;
   animation-duration: 1s;
   animation-iteration-count: infinite;
