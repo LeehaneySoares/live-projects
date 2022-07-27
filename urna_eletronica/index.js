@@ -1,3 +1,3 @@
 import Urna from './urna/Urna.js'
 
-Urna.create()
+export default Urna.create()
