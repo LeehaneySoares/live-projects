@@ -3,16 +3,16 @@ import events from './events.js'
 
 class Keyboard {
   #botoes
-  #display
-  #value
   #numero
+  #parent
+  #value
 
   get botoes () {
     return this.#botoes ??= all('button')
   }
 
   get display () {
-    return this.#display ??= ''
+    return this.parent?.display
   }
 
   get value () {
@@ -20,7 +20,7 @@ class Keyboard {
   }
 
   constructor (parent) {
-    this.#display = parent?.display
+    this.#parent = parent
     events(this)
   }
 
