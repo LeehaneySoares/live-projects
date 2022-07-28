@@ -79,6 +79,7 @@ class Display {
     this.#schema = schema
     this.#parent = parent
     this.comecarEtapa()
+    this.montarBlocos()
   }
 
   changeBloco (value) {
@@ -95,7 +96,6 @@ class Display {
     this.#showInfo
       ? this.#mostrarDesc()
       : this.#esconderDesc()
-    this.montarBlocos()
     return this
   }
 
@@ -140,9 +140,16 @@ class Display {
     let etapa = this.schema[this.#etapaActual]
     this.#candidato = etapa.candidatos
       .filter(item => item.numero === this.numero)
-    this.candidato.length > 0
-      ? this.#mostrarDesc()
-      : this.#votoNulo()
+    this.candidato.length > 0 && (
+      this.#showInfo = true,
+      this.comecarEtapa()
+    ) || this.#votoNulo()
+    return this
+  }
+
+  rewind () {
+    this.#esconderDesc()
+    this.#numero = ''
     return this
   }
 

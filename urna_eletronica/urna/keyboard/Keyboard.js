@@ -1,3 +1,4 @@
+import * as actions from './actions/index.js'
 import { all } from '../shortcuts.js'
 import events from './events.js'
 
@@ -24,9 +25,16 @@ class Keyboard {
     events(this)
   }
 
-  changeTarget (value) {
+  changeValue (value) {
     this.#value = value
     this.display.changeBloco(this.value)
+    return this
+  }
+
+  actions (target) {
+    target === 'Confirmar' && actions.confirma(this)
+    target === 'Corrige' && actions.corrige(this)
+    target === 'Branco' && actions.branco(this)
     return this
   }
 

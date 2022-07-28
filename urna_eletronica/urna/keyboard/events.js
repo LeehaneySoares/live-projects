@@ -4,7 +4,7 @@ export default (keyboard) =>
       const target = element.innerHTML
 
       return /btn/g.test(element.classList[1])
-        ? keyboard.changeTarget(String(target))
-        : keyboard.changeTarget(Number(target))
+        ? keyboard.actions(String(target))
+        : keyboard.changeValue(Number(target))
     })  
   )
