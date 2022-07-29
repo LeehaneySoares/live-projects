@@ -1,4 +1,4 @@
-import { $ } from '../shortcuts.js'
+import { $, all } from '../shortcuts.js'
 import montarDados from './montarDados.js'
 import montarFotos from './montarFotos.js'
 
@@ -12,7 +12,7 @@ class Display {
   #etapaActual = 0
   #etapa
   #lateral
-  #numero
+  #numero = ''
   #numeros
   #numeroHtml = ''
   #parent
@@ -150,6 +150,10 @@ class Display {
   rewind () {
     this.#esconderDesc()
     this.#numero = ''
+    all('.numero').forEach(item => (
+      item.innerHTML = 0,
+      this.comecarEtapa()
+    ))
     return this
   }
 
