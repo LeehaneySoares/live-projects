@@ -148,12 +148,10 @@ class Display {
   }
 
   rewind () {
-    this.#esconderDesc()
+    this.#numeroHtml = ''
     this.#numero = ''
-    all('.numero').forEach(item => (
-      item.innerHTML = 0,
-      this.comecarEtapa()
-    ))
+    this.montarBlocos()
+    this.#esconderDesc()
     return this
   }
 
