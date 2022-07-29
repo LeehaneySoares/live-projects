@@ -1,3 +1,3 @@
-export default (target) => (
-  console.log(target?.display)
-)
+export default (target) =>
+  target?.display.rewind() &&
+  target?.display?.comecarEtapa()
