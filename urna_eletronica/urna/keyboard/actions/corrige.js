@@ -1,3 +1,3 @@
-export default (target) =>
-  target?.display.rewind() &&
-  target?.display?.comecarEtapa()
+const reset = (target) => target?.display.rewind()
+
+export default reset
